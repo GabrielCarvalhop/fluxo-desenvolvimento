@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLUXO Desenvolvimento — Sistemas e sites feitos para o seu negócio</title>
+<meta name="description" content="A FLUXO Desenvolvimento cria sistemas de gestão, sistemas personalizados e sites profissionais para empresas que precisam de tecnologia que funciona de verdade.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<canvas class="flow-canvas flow-canvas--ambient" id="flowAmbient" aria-hidden="true"></canvas>
+
+<header class="header" id="siteHeader">
+  <div class="container header__inner">
+    <a href="#topo" class="logo">
+      <svg class="logo__mark" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 22C4 22 9 8 15 8C21 8 21 22 26 22" stroke="url(#logoGrad)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="4" cy="22" r="2.4" fill="url(#logoGrad)"/>
+        <circle cx="26" cy="22" r="2.4" fill="url(#logoGrad)"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="4" y1="8" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E4232B"/>
+            <stop offset="1" stop-color="#FF5A52"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo__text">FLUXO<span class="logo__sub">Desenvolvimento</span></span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm nav-desktop" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar com a FLUXO</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-scrim" id="navScrim"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar com a FLUXO</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="topo">
+    <canvas class="flow-canvas flow-canvas--hero" id="flowHero" aria-hidden="true"></canvas>
+    <div class="container hero__inner">
+      <span class="badge reveal">Estúdio de Desenvolvimento</span>
+      <h1 class="hero__title reveal">Seu negócio. <br class="lb-desktop">Seu fluxo. <span class="text-gradient">Seu sistema.</span></h1>
+      <p class="hero__subtitle reveal">Sistemas de gestão, sistemas personalizados e sites desenvolvidos para o seu negócio funcionar melhor — sem complicação, sem termos difíceis.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary btn--lg" href="#contato">Quero minha solução</a>
+        <a class="btn btn--ghost btn--lg" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIFERENCIAIS ============ -->
+  <section class="section" id="diferenciais">
+    <div class="container">
+      <p class="eyebrow reveal">DIFERENCIAIS</p>
+      <h2 class="section__title reveal">Por que empresas escolhem a FLUXO?</h2>
+      <p class="section__lead reveal">Cada sistema e cada site é construído para resolver um problema real do seu negócio — não para parecer bonito só na tela.</p>
+
+      <div class="grid grid--4 reveal-stagger">
+        <article class="card">
+          <span class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg>
+          </span>
+          <h3>Feito sob medida</h3>
+          <p>Sistemas e sites pensados para o funcionamento real do seu negócio — nada de modelos genéricos.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          </span>
+          <h3>Simples de usar</h3>
+          <p>Interfaces diretas, sem complicação, para você e sua equipe usarem no dia a dia sem treinamento.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+          </span>
+          <h3>Tecnologia sólida</h3>
+          <p>Código bem estruturado, performance e segurança como padrão — não como extra opcional.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.6 8.9 2.4 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.6 0 5.4 3.9 3.5 7.5C19 16.65 12 21 12 21Z"/></svg>
+          </span>
+          <h3>Suporte de verdade</h3>
+          <p>Acompanhamento após a entrega, prontos para ajustar e evoluir junto com o seu negócio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMO FUNCIONA ============ -->
+  <section class="section section--dark" id="como-funciona">
+    <div class="container">
+      <p class="eyebrow reveal">PROCESSO</p>
+      <h2 class="section__title reveal">Como funciona</h2>
+      <p class="section__lead reveal">Do primeiro contato à entrega, um processo simples e transparente.</p>
+
+      <div class="steps reveal-stagger">
+        <div class="step">
+          <span class="step__num">01</span>
+          <h3>Conversa inicial</h3>
+          <p>Entendemos como sua empresa funciona hoje e onde um sistema ou site pode facilitar o processo.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">02</span>
+          <h3>Planejamento e desenvolvimento</h3>
+          <p>Estruturamos e construímos a solução sob medida, com foco em funcionar bem desde o primeiro dia.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">03</span>
+          <h3>Ajustes</h3>
+          <p>Você acompanha o andamento e pede os ajustes necessários antes da entrega final.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">04</span>
+          <h3>Entrega e suporte</h3>
+          <p>Sistema ou site no ar, com suporte contínuo para o que vier depois.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="section" id="sobre">
+    <div class="container about__inner">
+      <div class="reveal">
+        <p class="eyebrow">SOBRE</p>
+        <h2 class="section__title">Tecnologia que funciona <span class="text-gradient">de verdade</span></h2>
+      </div>
+      <div class="about__text reveal">
+        <p>A FLUXO Desenvolvimento é uma empresa de tecnologia focada em transformar necessidades de empresas em soluções digitais simples, modernas e funcionais.</p>
+        <p>Trabalhamos com três frentes principais: sistemas de gestão, sistemas personalizados e sites — sem comunicação excessivamente técnica, sem "transformação digital 360º". Só tecnologia pensada para o seu negócio funcionar melhor.</p>
+        <a class="btn btn--primary" href="#contato">Conversar com a FLUXO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section class="section section--dark" id="servicos">
+    <div class="container">
+      <p class="eyebrow reveal">SERVIÇOS</p>
+      <h2 class="section__title reveal">Os 3 pilares da FLUXO</h2>
+      <p class="section__lead reveal">Soluções digitais completas para organizar, personalizar e apresentar o seu negócio.</p>
+
+      <div class="grid grid--3 reveal-stagger">
+        <article class="card card--pillar">
+          <span class="card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          </span>
+          <h3>Sistemas de Gestão</h3>
+          <p>Desenvolvimento de sistemas para organizar e facilitar processos da empresa: vendas, estoque, clientes, pedidos, usuários e operações internas.</p>
+        </article>
+        <article class="card card--pillar">
+          <span class="card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          </span>
+          <h3>Sistemas Personalizados</h3>
+          <p>Criação de sistemas desenvolvidos especificamente de acordo com a necessidade e o funcionamento de cada negócio.</p>
+        </article>
+        <article class="card card--pillar">
+          <span class="card__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
+          </span>
+          <h3>Sites</h3>
+          <p>Desenvolvimento de sites modernos, profissionais, responsivos e pensados para apresentar empresas, serviços e produtos de forma clara e atrativa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS ============ -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <p class="eyebrow reveal">PROJETOS</p>
+      <h2 class="section__title reveal">O que a FLUXO desenvolve</h2>
+      <p class="section__lead reveal">Alguns exemplos do tipo de solução que construímos para diferentes negócios.</p>
+
+      <div class="grid grid--3 reveal-stagger">
+        <article class="project-card">
+          <span class="project-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M3 5h18v14H3V5Z"/><path d="M8 13h3M8 17h6"/></svg>
+          </span>
+          <h3>Sistema de Gestão para Comércio</h3>
+          <ul>
+            <li>Controle de vendas e estoque</li>
+            <li>Cadastro de clientes e pedidos</li>
+            <li>Painel com acesso por usuário</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <span class="project-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6"/><path d="M16 19h6M19 16v6"/></svg>
+          </span>
+          <h3>Sistema Personalizado de Pedidos</h3>
+          <ul>
+            <li>Fluxo adaptado ao processo da empresa</li>
+            <li>Acompanhamento de status em tempo real</li>
+            <li>Integração com o dia a dia da equipe</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <span class="project-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg>
+          </span>
+          <h3>Site Institucional</h3>
+          <ul>
+            <li>Apresentação clara da empresa e serviços</li>
+            <li>Design responsivo para todos os dispositivos</li>
+            <li>Contato direto via WhatsApp</li>
+          </ul>
+        </article>
+      </div>
+      <p class="projects__note reveal">Exemplos ilustrativos dos tipos de solução que desenvolvemos — em breve, cases reais de clientes por aqui.</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section section--dark cta" id="contato">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <canvas class="flow-canvas flow-canvas--cta" id="flowCta" aria-hidden="true"></canvas>
+    <div class="container cta__inner">
+      <p class="eyebrow reveal">VAMOS COMEÇAR?</p>
+      <h2 class="section__title reveal">Precisa de um sistema ou site <span class="text-gradient">para sua empresa</span>?</h2>
+      <p class="section__lead reveal">Vamos entender seu negócio e construir uma solução que realmente funciona. Sem compromisso.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary btn--lg" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn--ghost btn--lg" href="mailto:contato@fluxodesenvolvimento.com.br">Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#topo" class="logo">
+        <svg class="logo__mark" width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 22C4 22 9 8 15 8C21 8 21 22 26 22" stroke="url(#logoGradFooter)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="4" cy="22" r="2.4" fill="url(#logoGradFooter)"/>
+          <circle cx="26" cy="22" r="2.4" fill="url(#logoGradFooter)"/>
+          <defs>
+            <linearGradient id="logoGradFooter" x1="4" y1="8" x2="26" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E4232B"/>
+              <stop offset="1" stop-color="#FF5A52"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo__text">FLUXO<span class="logo__sub">Desenvolvimento</span></span>
+      </a>
+      <p>Sistemas de gestão, sistemas personalizados e sites feitos para o seu negócio funcionar melhor.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegação</h4>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato@fluxodesenvolvimento.com.br">contato@fluxodesenvolvimento.com.br</a>
+      <span class="footer__muted">fluxodesenvolvimento.com.br</span>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 FLUXO Desenvolvimento. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a class="wa-fab" id="waFab" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.34a9.86 9.86 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.95 6.45 17.5 2 12.04 2Zm5.79 14.02c-.24.68-1.4 1.32-1.93 1.4-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.61-.6-2.84-1.22-4.69-4.08-4.83-4.27-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.38.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.13.57.17.29.75 1.24 1.61 2.01 1.11.99 2.04 1.29 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.64.78 1.92.92.29.14.48.21.55.33.07.12.07.68-.16 1.36Z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+<script src="js/flow-bg.js"></script>
+</body>
+</html>
