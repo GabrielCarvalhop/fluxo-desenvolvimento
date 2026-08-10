@@ -4,7 +4,7 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const mobileQuery = window.matchMedia('(max-width: 640px)');
 
-  /* Curvas em espaço normalizado (0-1), no espírito do traço do logo da FLUXO.
+  /* Curvas em espaço normalizado (0-1), no espírito do traço do logo da Vertex.
      Reaproveitadas por todas as instâncias — cada canvas as redimensiona ao seu próprio tamanho. */
   const FLOW_PATHS = [
     [[-0.1, 0.15], [0.30, 0.90], [0.55, -0.15], [1.1, 0.55]],
