@@ -420,6 +420,71 @@ html.nav-open .mobile-drawer{ transform: translateX(0); }
   max-width: 560px;
 }
 
+/* ------------------------------ carrossel 3D -------------------------------- */
+.carousel-section{ overflow: hidden; }
+.carousel-section .container{ text-align: center; }
+.carousel-section .section__title{ margin-left: auto; margin-right: auto; }
+.carousel-section .eyebrow{ text-align: center; }
+
+.carousel3d{
+  position: relative;
+  height: clamp(240px, 34vw, 380px);
+  margin-top: 44px;
+  perspective: 1400px;
+}
+.carousel3d__stage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.carousel3d__cylinder{
+  position: relative;
+  height: 78%;
+  transform-style: preserve-3d;
+  cursor: grab;
+  touch-action: pan-y;
+  will-change: transform;
+}
+.carousel3d__cylinder:active{ cursor: grabbing; }
+
+.carousel3d__face{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.carousel3d__face img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: calc(var(--radius-lg) - 6px);
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.carousel3d__hint{
+  text-align: center;
+  margin-top: 18px;
+  font-size: .82rem;
+  color: var(--texto-fraco);
+}
+
+@media (max-width: 640px){
+  .carousel3d__face{ padding: 4px; }
+}
+
 /* ------------------------------ projetos (case studies) -------------------------------- */
 .case-list{
   display: flex;
@@ -432,6 +497,7 @@ html.nav-open .mobile-drawer{ transform: translateX(0); }
   grid-template-columns: 1.05fr 1fr;
   gap: clamp(32px, 5vw, 64px);
   align-items: center;
+  scroll-margin-top: 110px;
 }
 .case--flip .case__media{ order: 2; }
 .case--flip .case__body{ order: 1; }

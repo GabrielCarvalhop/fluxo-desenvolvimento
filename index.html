@@ -73,6 +73,28 @@
     </div>
   </section>
 
+  <!-- ============ VITRINE (carrossel 3D) ============ -->
+  <section class="section carousel-section" id="vitrine">
+    <div class="container">
+      <p class="eyebrow reveal">PORTFÓLIO EM MOVIMENTO</p>
+      <h2 class="section__title reveal">Projetos que já colocamos no ar.</h2>
+    </div>
+
+    <div class="carousel3d" id="carousel3d">
+      <div class="carousel3d__stage">
+        <div class="carousel3d__cylinder" id="carousel3dCylinder">
+          <div class="carousel3d__face" data-target="case-teixeira"><img src="img/portfolio/teixeira.png" alt="Gabriel Teixeira Advocacia Criminal" draggable="false"></div>
+          <div class="carousel3d__face" data-target="case-alpha-shape"><img src="img/portfolio/alpha-shape.png" alt="Alpha Shape" draggable="false"></div>
+          <div class="carousel3d__face" data-target="case-lucas-reis"><img src="img/portfolio/lucas-reis.png" alt="Lucas Reis Tattoo" draggable="false"></div>
+          <div class="carousel3d__face" data-target="case-moveis-faria"><img src="img/portfolio/moveis-faria.png" alt="Móveis Faria" draggable="false"></div>
+          <div class="carousel3d__face" data-target="case-pouso-da-rita"><img src="img/portfolio/pouso-da-rita.png" alt="Pouso da Rita" draggable="false"></div>
+          <div class="carousel3d__face" data-target="case-rafaela"><img src="img/portfolio/rafaela.png" alt="Rafaela Souza Nutricionista" draggable="false"></div>
+        </div>
+      </div>
+    </div>
+    <p class="carousel3d__hint reveal">Arraste para girar · clique para ver o projeto</p>
+  </section>
+
   <!-- ============ DIFERENCIAIS ============ -->
   <section class="section" id="diferenciais">
     <div class="container">
@@ -201,7 +223,7 @@
       <p class="section__lead reveal">Uma seleção de projetos digitais desenvolvidos a partir da identidade, do público e dos objetivos de cada marca. De websites institucionais a catálogos digitais, cada interface é pensada para unir design, experiência e estratégia — sem depender de soluções genéricas.</p>
 
       <div class="case-list">
-        <article class="case reveal">
+        <article class="case reveal" id="case-teixeira">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/teixeira.png" alt="Site institucional de Gabriel Teixeira Advocacia Criminal">
             <a class="btn btn--primary case__cta" href="https://gabriel-teixeira.vercel.app" target="_blank" rel="noopener">Ver projeto ↗</a>
@@ -217,7 +239,7 @@
           </div>
         </article>
 
-        <article class="case case--flip reveal">
+        <article class="case case--flip reveal" id="case-alpha-shape">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/alpha-shape.png" alt="Site catálogo da Alpha Shape, moda fitness feminina">
             <a class="btn btn--primary case__cta" href="https://alpha-shape-flax.vercel.app" target="_blank" rel="noopener">Explorar projeto ↗</a>
@@ -233,7 +255,7 @@
           </div>
         </article>
 
-        <article class="case reveal">
+        <article class="case reveal" id="case-lucas-reis">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/lucas-reis.png" alt="Site portfólio do tatuador Lucas Reis">
             <a class="btn btn--primary case__cta" href="https://lucasreistattoo.com.br" target="_blank" rel="noopener">Conhecer projeto ↗</a>
@@ -249,7 +271,7 @@
           </div>
         </article>
 
-        <article class="case case--flip reveal">
+        <article class="case case--flip reveal" id="case-moveis-faria">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/moveis-faria.png" alt="Site catálogo da Móveis Faria">
             <a class="btn btn--primary case__cta" href="https://moveis-faria-web.vercel.app" target="_blank" rel="noopener">Explorar projeto ↗</a>
@@ -265,7 +287,7 @@
           </div>
         </article>
 
-        <article class="case reveal">
+        <article class="case reveal" id="case-pouso-da-rita">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/pouso-da-rita.png" alt="Site do Pouso da Rita, hospedagem em Tiradentes">
             <a class="btn btn--primary case__cta" href="https://pousodarita.vercel.app" target="_blank" rel="noopener">Conhecer projeto ↗</a>
@@ -281,7 +303,7 @@
           </div>
         </article>
 
-        <article class="case case--flip reveal">
+        <article class="case case--flip reveal" id="case-rafaela">
           <div class="case__media">
             <img class="case__img" src="img/portfolio/rafaela.png" alt="Site profissional da nutricionista Rafaela Souza">
             <a class="btn btn--primary case__cta" href="https://rafaela-souza-nutricionista.vercel.app" target="_blank" rel="noopener">Ver projeto ↗</a>
@@ -362,5 +384,6 @@
 
 <script src="js/script.js"></script>
 <script src="js/flow-bg.js"></script>
+<script src="js/carousel-3d.js"></script>
 </body>
 </html>
