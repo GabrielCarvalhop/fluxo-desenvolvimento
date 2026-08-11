@@ -18,6 +18,8 @@
   const IDLE_DELAY = 700;   // ms after last interaction before auto-rotate resumes
   const MAX_MOMENTUM = 2.5; // deg per ~16.7ms frame — caps runaway spins from noisy/very-fast pointer events
 
+  const DIRECTION_THRESHOLD = 6; // px moved before we decide "rotate" vs "let the page scroll"
+
   let rotation = 0;
   let momentum = 0;
   let dragging = false;
@@ -28,6 +30,12 @@
   let suppressNextClick = false;
   let lastInteraction = 0;
   let lastFrameTime = performance.now();
+
+  // pointerState: 'idle' -> 'pending' (touch started, direction not yet known)
+  // -> 'dragging' (horizontal: spin the carousel) or 'scrolling' (vertical: let the page scroll)
+  let pointerState = 'idle';
+  let startX = 0;
+  let startY = 0;
 
   let cylinderWidth = 0;
   let radius = 0;
@@ -70,16 +78,32 @@
   }
 
   function onPointerDown(e) {
-    dragging = true;
+    pointerState = 'pending';
     momentum = 0;
     totalMove = 0;
-    lastX = e.clientX;
+    startX = lastX = e.clientX;
+    startY = e.clientY;
     lastMoveTime = performance.now();
-    cylinder.setPointerCapture(e.pointerId);
   }
 
   function onPointerMove(e) {
-    if (!dragging) return;
+    if (pointerState === 'idle' || pointerState === 'scrolling') return;
+
+    if (pointerState === 'pending') {
+      const dxTotal = e.clientX - startX;
+      const dyTotal = e.clientY - startY;
+      if (Math.abs(dxTotal) < DIRECTION_THRESHOLD && Math.abs(dyTotal) < DIRECTION_THRESHOLD) return;
+
+      if (Math.abs(dyTotal) > Math.abs(dxTotal)) {
+        // predominantly vertical: hand the gesture back to the page (native scroll)
+        pointerState = 'scrolling';
+        return;
+      }
+      pointerState = 'dragging';
+      dragging = true;
+      try { cylinder.setPointerCapture(e.pointerId); } catch (err) { /* pointer already released/invalid — safe to ignore */ }
+    }
+
     const now = performance.now();
     const dx = e.clientX - lastX;
     lastX = e.clientX;
@@ -90,13 +114,17 @@
     const rawMomentum = (dx * SENSITIVITY) * (16.7 / dt);
     momentum = Math.max(-MAX_MOMENTUM, Math.min(MAX_MOMENTUM, rawMomentum));
     lastMoveTime = now;
+
+    applyRotation(); // reflect the drag immediately, without waiting for the next animation frame
   }
 
   function onPointerUp() {
-    if (!dragging) return;
-    dragging = false;
-    lastInteraction = performance.now();
-    if (totalMove >= 6) suppressNextClick = true;
+    if (pointerState === 'dragging') {
+      dragging = false;
+      lastInteraction = performance.now();
+      if (totalMove >= 6) suppressNextClick = true;
+    }
+    pointerState = 'idle';
   }
 
   cylinder.addEventListener('pointerdown', onPointerDown);
