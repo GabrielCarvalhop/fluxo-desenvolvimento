@@ -188,6 +188,8 @@ body{
 }
 
 .header__inner{
+  position: relative;
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -428,9 +430,9 @@ html.nav-open .mobile-drawer{ transform: translateX(0); }
 
 .carousel3d{
   position: relative;
-  height: clamp(240px, 34vw, 380px);
+  height: clamp(300px, 42vw, 480px);
   margin-top: 44px;
-  perspective: 1400px;
+  perspective: 1600px;
 }
 .carousel3d__stage{
   display: flex;
@@ -509,9 +511,9 @@ html.nav-open .mobile-drawer{ transform: translateX(0); }
 }
 .case__img{
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--surface);

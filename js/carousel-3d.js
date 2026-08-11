@@ -41,7 +41,7 @@
   let radius = 0;
 
   function computeDims() {
-    cylinderWidth = mobileQuery.matches ? 900 : 1500;
+    cylinderWidth = mobileQuery.matches ? 1150 : 1950;
     radius = cylinderWidth / (2 * Math.PI);
     const faceWidth = cylinderWidth / faceCount;
     const angleStep = 360 / faceCount;
